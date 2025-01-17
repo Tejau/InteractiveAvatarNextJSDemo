@@ -663,6 +663,19 @@ export default function InteractiveAvatar() {
             }} 
           />
         </Box>
+        {/* build and managed by Elite Principals Club */}
+        <br/> 
+        <Box sx={{ 
+          display: 'flex', 
+          alignItems: 'center', 
+          justifyContent: { xs: 'center', sm: 'flex-end' },
+          width: { xs: '100%', sm: 'auto' },
+          mb: { xs: 2, sm: 0 },
+          px: 2
+        }}>
+        <b> Built and Managed by Elite Principals Club </b>
+        </Box>
+        <br/> 
       </Card>
     </Box>
   );
