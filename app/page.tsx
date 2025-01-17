@@ -510,7 +510,7 @@ export default function InteractiveAvatar() {
                 </Button>
                 <Button
                   variant="contained"
-                  color="primary"
+                  color="error"
                   onClick={() => void endSession()}
                   size="small"
                 >
