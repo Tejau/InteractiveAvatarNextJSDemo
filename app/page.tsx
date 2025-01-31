@@ -455,7 +455,9 @@ export default function InteractiveAvatar() {
     <Box sx={{
       width: '100%',
       minHeight: '100vh',
-      padding: { xs: '8px', sm: '0px' },
+      margin:"0 auto"
+      // padding: { xs: '8px', sm: '0px' },
+      // border:"2px solid red"
     }}>
       <Card sx={{ 
         maxWidth: '100%', 
@@ -600,7 +602,7 @@ export default function InteractiveAvatar() {
                   mt: { xs: 2, sm: 3 }
                 }}
               >
-                I can help you with Admission queries, Learning Support, Doubt solving, Counselling
+                <b> Built and Managed by Elite Principals Club </b>
               </Typography>
             </Box>
           ) : (
@@ -608,7 +610,7 @@ export default function InteractiveAvatar() {
           )}
         </CardContent>
 
-        <Divider />
+        {/* <Divider /> */}
         
         <CardActions sx={{
           p: { xs: 2, sm: 3 },
@@ -633,19 +635,20 @@ export default function InteractiveAvatar() {
               />
             </Box>
           ) : (
-            <Typography 
-              variant="caption" 
-              sx={{ 
-                color: 'text.secondary',
-                textAlign: 'center',
-                fontSize: { xs: '0.75rem', sm: '0.875rem' }
-              }}
-            >
-              This AI Can make some mistakes. Check for important info
-            </Typography>
+            // <Typography 
+            //   variant="caption" 
+            //   sx={{ 
+            //     color: 'text.secondary',
+            //     textAlign: 'center',
+            //     fontSize: { xs: '0.75rem', sm: '0.875rem' }
+            //   }}
+            // >
+            //   This AI Can make some mistakes. Check for important info
+            // </Typography>
+            ""
           )}
         </CardActions>
-        <Box sx={{ 
+        {/* <Box sx={{ 
           display: 'flex', 
           alignItems: 'center', 
           justifyContent: { xs: 'center', sm: 'flex-end' },
@@ -662,10 +665,10 @@ export default function InteractiveAvatar() {
               marginLeft: '8px'
             }} 
           />
-        </Box>
+        </Box> */}
         {/* build and managed by Elite Principals Club */}
-        <br/> 
-        <Box sx={{ 
+        {/* <br/>  */}
+        {/* <Box sx={{ 
           display: 'flex', 
           alignItems: 'center', 
           justifyContent: { xs: 'center', sm: 'flex-end' },
@@ -674,7 +677,7 @@ export default function InteractiveAvatar() {
           px: 2
         }}>
         <b> Built and Managed by Elite Principals Club </b>
-        </Box>
+        </Box> */}
         <br/> 
       </Card>
     </Box>
