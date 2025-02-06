@@ -550,7 +550,7 @@ export default function InteractiveAvatar() {
                   mb: { xs: 1, sm: 2 }
                 }}
               >
-                Principal, Sanjeevini World School
+                Principal, Sanjeevani World School
               </Typography>
 
               <Box sx={{
