@@ -81,7 +81,7 @@ async function createConversation(): Promise<string> {
     });
 
     const data = await response.json();
-    return data.data.insert_conversation_one.id;
+    return data?.data?.insert_conversation_one?.id || "123456789";
   } catch (error) {
     console.error('Error creating conversation:', error);
     throw error;
