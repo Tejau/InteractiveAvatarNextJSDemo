@@ -1,7 +1,8 @@
-const HEYGEN_API_KEY = "NTlmNmJiZDdiNDFlNGJiYTlkNzE5MjFmNWNkM2QwMWMtMTczMTMyOTg4OA";
+const HEYGEN_API_KEY = "NTlmNmJiZDdiNDFlNGJiYTlkNzE5MjFmNWNkM2QwMWMtMTczNjc0NDE5MA==";
 
 export async function POST() {
   try {
+    console.log("entered")
     if (!HEYGEN_API_KEY) {
       throw new Error("API key is missing from .env");
     }
@@ -11,7 +12,7 @@ export async function POST() {
       {
         method: "POST",
         headers: {
-          "x-api-key": "NTlmNmJiZDdiNDFlNGJiYTlkNzE5MjFmNWNkM2QwMWMtMTczNjc0NDE5MA==",
+          "x-api-key": "NTlmNmJiZDdiNDFlNGJiYTlkNzE5MjFmNWNkM2QwMWMtMTc0MDY3NDczMg==",             
         },
       },
     );

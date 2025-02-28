@@ -63,25 +63,26 @@ const STT_LANGUAGE_LIST: Language[] = [
 
 async function createConversation(): Promise<string> {
   try {
-    const response = await fetch('https://hylo.travelr.club/v1/graphql', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'x-hasura-admin-secret': 'legalpwd123'
-      },
-      body: JSON.stringify({
-        query: `
-          mutation CreateConversation {
-  insert_conversation_one(object: {teacher_id: "a411a4db-97f8-47d7-95db-031ff675ab8e"}) {
-    id
-  }
-}
-        `
-      })
-    });
+//     const response = await fetch('https://hylo.travelr.club/v1/graphql', {
+//       method: 'POST',
+//       headers: {
+//         'Content-Type': 'application/json',
+//         'x-hasura-admin-secret': 'legalpwd123'
+//       },
+//       body: JSON.stringify({
+//         query: `
+//           mutation CreateConversation {
+//   insert_conversation_one(object: {teacher_id: "a411a4db-97f8-47d7-95db-031ff675ab8e"}) {
+//     id
+//   }
+// }
+//         `
+//       })
+//     });
 
-    const data = await response.json();
-    return data?.data?.insert_conversation_one?.id || "123456789";
+//     const data = await response.json();
+    // return data?.data?.insert_conversation_one?.id || "123456789";
+    return "123456789"
   } catch (error) {
     console.error('Error creating conversation:', error);
     throw error;
@@ -90,31 +91,32 @@ async function createConversation(): Promise<string> {
 
 async function addMessage(message: Message): Promise<void> {
   try {
-    await fetch('https://hylo.travelr.club/v1/graphql', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'x-hasura-admin-secret': 'legalpwd123'
-      },
-      body: JSON.stringify({
-        query: `
-          mutation AddMessage($content: String!, $conversation_id: uuid!, $role: String!) {
-            insert_message_one(object: {
-              content: $content,
-              conversation_id: $conversation_id,
-              role: $role
-            }) {
-              id
-            }
-          }
-        `,
-        variables: {
-          content: message.content,
-          conversation_id: message.conversation_id,
-          role: message.role
-        }
-      })
-    });
+    // await fetch('https://hylo.travelr.club/v1/graphql', {
+    //   method: 'POST',
+    //   headers: {
+    //     'Content-Type': 'application/json',
+    //     'x-hasura-admin-secret': 'legalpwd123'
+    //   },
+    //   body: JSON.stringify({
+    //     query: `
+    //       mutation AddMessage($content: String!, $conversation_id: uuid!, $role: String!) {
+    //         insert_message_one(object: {
+    //           content: $content,
+    //           conversation_id: $conversation_id,
+    //           role: $role
+    //         }) {
+    //           id
+    //         }
+    //       }
+    //     `,
+    //     variables: {
+    //       content: message.content,
+    //       conversation_id: message.conversation_id,
+    //       role: message.role
+    //     }
+    //   })
+    // });
+    return;
   } catch (error) {
     console.error('Error adding message:', error);
     throw error;
